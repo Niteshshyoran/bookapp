@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Author(models.Model):
     name = models.CharField( max_length=50)
     birthday = models.DateField()
-    biography = models.CharField( max_length=500,blank=True,default=None)
+    biography = models.CharField(max_length=500,blank=True,default=None)
     def __str__(self):
         return self.name
 

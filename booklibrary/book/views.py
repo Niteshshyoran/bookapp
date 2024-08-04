@@ -3,11 +3,11 @@ from django.contrib.auth.models import User
 from rest_framework.views import APIView
 from rest_framework import viewsets,status
 from rest_framework.response import Response
-
 from .models import Author,Books,Country
 from .serializer import UserSerializer,AuthorSerializer,BookSerializer,CountrySerializer
 from django.http import HttpResponse
 import datetime
+from rest_framework import pagination
 # from django.contrib.auth import login,logout,authenticate
 from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveUpdateDestroyAPIView
 # Create your views here.
@@ -62,3 +62,14 @@ class CountryRegisterView(CreateAPIView):
     serializer_class = CountrySerializer
 
 
+
+
+
+# pagenumber = CustomPagination
+
+
+# class CustomPagination(PageNumberPagination):
+#     page_size = 10
+#     page_size_query_param = 'page_size'
+#     max_page_size = 10000
+    
